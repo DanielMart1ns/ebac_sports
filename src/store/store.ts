@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import kartReducer from '../reducers/kart'
+import favoriteReducer from '../reducers/favorites'
 
 export const store = configureStore({
   reducer: {
-    kart: kartReducer
+    kart: kartReducer,
+    favorite: favoriteReducer
   }
 })
 
