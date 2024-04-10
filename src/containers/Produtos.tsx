@@ -6,14 +6,8 @@ import * as S from './styles'
 import { RootReducer } from '../store/store'
 import { useGetProductsQuery } from '../services/api'
 
-// type Props = {
-//   produtos: ProdutoType[]
-//   favoritos: ProdutoType[]
-//   adicionarAoCarrinho: (produto: ProdutoType) => void
-//   favoritar: (produto: ProdutoType) => void
-// }
-
 const ProdutosComponent = () => {
+  //Making request
   const { data: produto } = useGetProductsQuery()
 
   const favoritesItems = useSelector(
@@ -35,8 +29,6 @@ const ProdutosComponent = () => {
             estaNosFavoritos={produtoEstaNosFavoritos(produto)}
             key={produto.id}
             produto={produto}
-            // favoritar={favoritar}
-            // aoComprar={adicionarAoCarrinho}
           />
         ))}
       </S.Produtos>

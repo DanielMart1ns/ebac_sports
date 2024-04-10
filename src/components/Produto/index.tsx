@@ -6,8 +6,6 @@ import { addToFavorites } from '../../reducers/favorites'
 
 type Props = {
   produto: ProdutoType
-  // aoComprar: (produto: ProdutoType) => void
-  // favoritar: (produto: ProdutoType) => void
   estaNosFavoritos: boolean
 }
 
@@ -16,12 +14,8 @@ export const paraReal = (valor: number) =>
     valor
   )
 
-const ProdutoComponent = ({
-  produto,
-  // aoComprar,
-  // favoritar,
-  estaNosFavoritos
-}: Props) => {
+const ProdutoComponent = ({ produto, estaNosFavoritos }: Props) => {
+  //using Dispatch
   const dispatch = useDispatch()
 
   return (
